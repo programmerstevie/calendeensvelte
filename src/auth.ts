@@ -11,10 +11,12 @@ export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
 	const db = await createDrizzleInstance();
 
 	return {
+		trustHost: true,
 		adapter: DrizzleAdapter(db),
 		providers: [
 			Resend({
-				from: 'team@calendeen.site'
+				from: 'Calendeen <noreply@calendeen.site>',
+				name: 'Calendeen'
 			})
 		]
 	};
