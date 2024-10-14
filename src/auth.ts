@@ -11,7 +11,6 @@ export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
 	const db = await createDrizzleInstance();
 
 	return {
-		trustHost: true,
 		adapter: DrizzleAdapter(db),
 		providers: [
 			Resend({
