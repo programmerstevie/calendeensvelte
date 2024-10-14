@@ -11,7 +11,7 @@ const config = {
     // just remove this => Then add a supportEmail under mailgun
     id: "",
     // Hide Crisp by default, except on route "/". Crisp is toggled with <ButtonSupport />
-    onlyShowOnRoutes: ["/"],
+    onlyShowOnRoutes: ["/"]
   },
   stripe: {
     // Create multiple plans in your Stripe dashboard, then add them here.
@@ -21,9 +21,7 @@ const config = {
         // Required - we use this to find the plan in the webhook
         // (for instance if you want to update the user's credits based on the plan)
         priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_SLKDHkjh8yP8UPO98pouikj"
-            : "price_456",
+          process.env.NODE_ENV === "development" ? "price_SLKDHkjh8yP8UPO98pouikj" : "price_456",
         // REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page.
@@ -38,8 +36,8 @@ const config = {
           { name: "SvelteKit boilerplate" },
           { name: "User oauth" },
           { name: "Database" },
-          { name: "Emails" },
-        ],
+          { name: "Emails" }
+        ]
       },
       // Repeat the above plan properties for each plan you want to add.
       {
@@ -60,16 +58,16 @@ const config = {
           { name: "Database" },
           { name: "Emails" },
           { name: "Chat" },
-          { name: "Project management" },
-        ],
-      },
-    ],
+          { name: "Project management" }
+        ]
+      }
+    ]
   },
   aws: {
     // If you use AWS S3/Cloudfront, put values in here
     bucket: "bucket-name",
     bucketUrl: `https://bucket-name.s3.amazonaws.com/`,
-    cdn: "https://cdn-id.cloudfront.net/",
+    cdn: "https://cdn-id.cloudfront.net/"
   },
   // mailgun: {
   //   // subdomain to use when sending emails, if you don't have a subdomain, just remove it.
@@ -89,17 +87,17 @@ const config = {
   resend: {
     // subdomain to use when sending emails, if you don't have a subdomain, just remove it.
     // Highly recommended to have one (i.e. mg.yourdomain.com or mail.yourdomain.com)
-    subdomain: "mg",
+    subdomain: "mail",
     // REQUIRED - Email 'From' field to be used when sending magic login links
-    fromNoReply: `ShipFast <noreply@mg.shipfa.st>`,
+    fromNoReply: `Calendeen <noreply@mail.calendeen.site>`,
     // REQUIRED - Email 'From' field to be used when sending other emails, like abandoned carts, updates etc...
-    fromAdmin: `Steven at ShipFast <steb@mg.shipfa.st>`,
+    fromAdmin: `Steven at Calendeen <steb@mail.calendeen.site>`,
     // Email shown to customer if need support. Leave empty if not needed =>
     // if empty, set up Crisp, otherwise you won't be able to offer customer support.
-    supportEmail: "steb@mg.shipfa.st",
+    supportEmail: "steb@mail.calendeen.site",
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost).
     // If you set supportEmail to empty, this is used as a fallback.
-    forwardRepliesTo: "stevensan0606@gmail.com",
+    forwardRepliesTo: "stevensan0606@gmail.com"
   },
   colors: {
     // REQUIRED - The DaisyUI theme to use (added to _document.jsx). Leave blank for default (light and dark mode).
@@ -108,11 +106,11 @@ const config = {
     // REQUIRED - This color will be reflected on the whole app outside of the document (loading bar, Chrome tabs, etc).
     // By default it takes the primary color.
     // OR you can just do this to use a custom color: main: "#f37055". HEX only.
-    main: themes["retro"]["primary"],
+    main: themes["retro"]["primary"]
   },
   // REQUIRED - the path you want to redirect users to after successful login
   // (i.e. /dashboard, /private), This is normally a private pages for users to manage their account/product
-  callbackUrl: "/dashboard",
+  callbackUrl: "/dashboard"
 };
 
 export default config;

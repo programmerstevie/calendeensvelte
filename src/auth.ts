@@ -1,23 +1,21 @@
-import { SvelteKitAuth } from '@auth/sveltekit';
-import { DrizzleAdapter } from '@auth/drizzle-adapter';
-import Resend from '@auth/sveltekit/providers/resend';
+import { SvelteKitAuth } from "@auth/sveltekit";
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import Resend from "@auth/sveltekit/providers/resend";
 
-import { createDrizzleInstance } from './db';
+import { getDB } from "./db";
+import config from "./config";
 
 export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
-	// event.platform.env.TURSO_DATABASE_URL
-	// event.platform.env.TURSO_AUTH_TOKEN
+  const db = await getDB();
 
-	const db = await createDrizzleInstance();
-
-	return {
-    trustHost: event.platform?.env?.AUTH_TRUST_HOST,
-		adapter: DrizzleAdapter(db),
-		providers: [
-			Resend({
-				from: 'Calendeen <noreply@calendeen.site>',
-				name: 'Calendeen'
-			})
-		]
-	};
+  return {
+    trustHost: true,
+    adapter: DrizzleAdapter(db),
+    providers: [
+      Resend({
+        from: config.resend.fromNoReply,
+        name: config.appName
+      })
+    ]
+  };
 });

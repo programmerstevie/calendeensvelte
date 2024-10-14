@@ -1,3 +1,1 @@
-<div>
-  This is Pricing
-</div>
+<div>This is Pricing</div>
