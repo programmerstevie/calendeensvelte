@@ -11,3 +11,16 @@
 		display: none; /* Chrome, Safari, and Opera */
 	}
 }
+/* // <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 300 to 700 */
+.quicksand {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.sriracha {
+  font-family: "Sriracha", serif;
+  /* font-weight: 400; */
+  font-style: normal;
+}

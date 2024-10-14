@@ -1,13 +1,25 @@
 <script>
+	import { onMount } from 'svelte';
+
+	import TagSEO from '../lib/components/TagSEO.svelte';
+	import Header from '../lib/components/Header.svelte';
+	import Hero from '../lib/components/Hero.svelte';
+	import Pricing from '../lib/components/Pricing.svelte';
+	import Footer from '../lib/components/Footer.svelte';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 
-  import {onMount} from 'svelte';
-
-  onMount(() => {
-    console.log(data.post);
-  })
+	onMount(() => {
+		console.log(data.post);
+	});
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<TagSEO canonicalSlug="" />
+<!-- <TagSchema /> -->
+<main>
+	<Header></Header>
+	<Hero></Hero>
+	<Pricing></Pricing>
+	<Footer></Footer>
+</main>
