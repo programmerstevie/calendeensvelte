@@ -5,16 +5,17 @@ import { TURSO_DATABASE_URL, TURSO_AUTH_TOKEN, NODE_ENV } from '$env/static/priv
 const getClient = async () => {
 	switch (NODE_ENV) {
 		case 'development':
-			return (await import('@libsql/client/web')).createClient({
+			return (await import('@libsql/client')).createClient({
 				url: 'file:local.db'
 			});
 		case 'production':
-			return (await import('@libsql/client')).createClient({
+		default:
+			return (await import('@libsql/client/web')).createClient({
 				url: TURSO_DATABASE_URL,
 				authToken: TURSO_AUTH_TOKEN
 			});
-		default:
-			throw new Error('Unsupported NODE_ENV');
+		// default:
+		// 	throw new Error('Unsupported NODE_ENV');
 	}
 };
 

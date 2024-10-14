@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 
+	import { SignIn } from '@auth/sveltekit/components';
+
 	import TagSEO from '../lib/components/TagSEO.svelte';
 	import Header from '../lib/components/Header.svelte';
 	import Hero from '../lib/components/Hero.svelte';
@@ -23,3 +25,12 @@
 	<Pricing></Pricing>
 	<Footer></Footer>
 </main>
+
+<div>
+	<nav>
+		<img src="/logo.png" alt="Company Logo" width="64" />
+		<SignIn provider="resend">
+			<span class="btn btn-secondary" slot="submitButton">Sign In with Resend</span>
+		</SignIn>
+	</nav>
+</div>
