@@ -6,7 +6,6 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "base-content-secondary": "oklch(0.5 0 0)"
       },
       animation: {
         popup: "popup 1s ease",

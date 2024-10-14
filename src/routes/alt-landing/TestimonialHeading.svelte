@@ -1,5 +1,4 @@
 <script>
-  export let children;
 </script>
 
-<h3 class="text-xl font-bold">{children}</h3>
+<h3 class="text-xl font-bold text-neutral-content"><slot /></h3>

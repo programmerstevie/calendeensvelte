@@ -1,5 +1,6 @@
 <script>
-  export let children;
 </script>
 
-<div>{children}</div>
+<div>
+  <slot />
+</div>

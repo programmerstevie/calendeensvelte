@@ -49,6 +49,7 @@
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.34.1",
     "svelte-email": "^0.0.4",
+    "svelte-icons": "^2.1.0",
     "tailwind-merge": "^2.5.3"
   }
 }
