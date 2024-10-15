@@ -17,6 +17,10 @@
   });
 </script>
 
+{#if data.session?.user}
+  <div class="bg-info text-info-content font-bold">You are logged in</div>
+{/if}
+
 <TagSEO canonicalSlug="" />
 <!-- <TagSchema /> -->
 <main>

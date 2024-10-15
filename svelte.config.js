@@ -21,7 +21,8 @@ const config = {
       }
     }),
     alias: {
-      "@/*": "src"
+      "@/*": "src",
+      "$components/*": "src/lib/components"
     }
   }
 };

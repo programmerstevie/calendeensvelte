@@ -14,7 +14,8 @@
     "pulldb:dev": "npx drizzle-kit pull --config=drizzle-dev.config.ts",
     "pushdb:dev": "npx drizzle-kit push --config=drizzle-dev.config.ts",
     "pulldb:prod": "npx drizzle-kit pull --config=drizzle-prod.config.ts",
-    "pushdb:prod": "npx drizzle-kit push --config=drizzle-prod.config.ts"
+    "pushdb:prod": "npx drizzle-kit push --config=drizzle-prod.config.ts",
+    "gen:email": "node script/generate-email-template.cjs"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241011.0",
@@ -22,6 +23,8 @@
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
     "@types/eslint": "^9.6.0",
+    "@types/mjml": "^4.7.4",
+    "@types/mustache": "^4.2.5",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.13",
     "drizzle-kit": "^0.25.0",
@@ -48,8 +51,8 @@
     "@libsql/client": "^0.14.0",
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.34.1",
-    "svelte-email": "^0.0.4",
     "svelte-icons": "^2.1.0",
-    "tailwind-merge": "^2.5.3"
+    "tailwind-merge": "^2.5.3",
+    "tw-to-css": "0.0.12"
   }
 }

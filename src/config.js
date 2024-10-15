@@ -21,7 +21,7 @@ const config = {
         // Required - we use this to find the plan in the webhook
         // (for instance if you want to update the user's credits based on the plan)
         priceId:
-          process.env.NODE_ENV === "development" ? "price_SLKDHkjh8yP8UPO98pouikj" : "price_456",
+          process.env.NODE_ENV === "production" ? "price_SLKDHkjh8yP8UPO98pouikj" : "price_456",
         // REQUIRED - Name of the plan, displayed on the pricing page
         name: "Starter",
         // A friendly description of the plan, displayed on the pricing page.
@@ -45,9 +45,7 @@ const config = {
         // You can only have one plan with isFeatured: true.
         isFeatured: true,
         priceId:
-          process.env.NODE_ENV === "development"
-            ? "price_SLKDHkjh8ygdfgP8UPO98pouikj"
-            : "price_789",
+          process.env.NODE_ENV === "production" ? "price_SLKDHkjh8ygdfgP8UPO98pouikj" : "price_789",
         name: "Professional",
         description: "Perfect for larger projects",
         price: 149,
@@ -94,7 +92,7 @@ const config = {
     fromAdmin: `Steven at Calendeen <steb@mail.calendeen.site>`,
     // Email shown to customer if need support. Leave empty if not needed =>
     // if empty, set up Crisp, otherwise you won't be able to offer customer support.
-    supportEmail: "steb@mail.calendeen.site",
+    supportEmail: "support@mail.calendeen.site",
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost).
     // If you set supportEmail to empty, this is used as a fallback.
     forwardRepliesTo: "stevensan0606@gmail.com"
