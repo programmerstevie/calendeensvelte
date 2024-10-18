@@ -1,4 +1,13 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "calendeensvelte"
-compatibility_date = "2024-10-11"
+compatibility_date = "2024-10-04"
 pages_build_output_dir = ".svelte-kit/cloudflare"
+
+[vars]
+# Public variables
+PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_live_51Q9XhzK7kf3vNCJg3Sh2dUmBpMKsFLP3PSYIiUgqfRX8SlYIuYUWXRTXd7MFEXRdYd0ct177FTZQZj82r7jRm0ev00jhuEF4VE"
+# PUBLIC_PROJECT_NAME=
+# PUBLIC_ORIGIN=
+# PUBLIC_POSTHOG_KEY=
+# PUBLIC_DEFAULT_TITLE=
+# PUBLIC_DEFAULT_DESCRIPTION=

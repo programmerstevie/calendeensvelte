@@ -5,7 +5,7 @@ import { AUTH_SECRET, AUTH_RESEND_KEY } from "$env/static/private";
 
 import { getDB } from "./db";
 import config from "./config";
-import magicLinkTemplate from "../emails/magicLink-template";
+import * as MagicLinkTemplate from "../emails/magic-link.js";
 
 export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
   const db = await getDB();
@@ -21,8 +21,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
         apiKey: AUTH_RESEND_KEY,
         async sendVerificationRequest(params) {
           // Define prop values
-          const props = {
-            domainName: config.domainName,
+          const props: MagicLinkTemplate.Props = {
             appName: config.appName,
             signInLink: params.url,
             headerImageSrc:
@@ -33,7 +32,7 @@ export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
           };
 
           // Create the email template and replace handlebars with prop values.
-          const html = magicLinkTemplate(props);
+          const html = MagicLinkTemplate.template.withProps(props);
 
           const res = await fetch("https://api.resend.com/emails", {
             method: "POST",

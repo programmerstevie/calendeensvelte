@@ -1,5 +1,3 @@
-
-
 /**
  * @typedef {Object} Props
  * @property {unknown} appName
@@ -10,14 +8,12 @@
  * @property {unknown} year
  */
 
-
 /**
  * Generates the email template.
  * @param {Props} props - The properties to inject into the template.
  * @returns {string} The generated email HTML.
  */
-
-const emailTemplate = (props) => `<!doctype html>
+const withProps = (props) => `<!doctype html>
 <html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
@@ -217,5 +213,4 @@ const emailTemplate = (props) => `<!doctype html>
 
 </html>
 `;
-export default emailTemplate;
-    
+export const template = { withProps };
