@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)"
+        foreground: "var(--foreground)",
+        "neutral-content-secondary": "#e0e0e8d0"
       },
       animation: {
         popup: "popup 1s ease",

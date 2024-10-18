@@ -5,7 +5,7 @@
 
 <header class="bg-base-100 h-24">
   <nav class="h-full navbar">
-    <Container class="h-full">
+    <Container class="h-full outer-container">
       <a href="#top" class="flex items-center flex-1">
         <img src="/logo.png" width={50} height={50} alt="logo" class="animate-shake-center"/>
         <span class="ml-5 text-3xl font-bold">{config.appName}</span>

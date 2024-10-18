@@ -10,6 +10,10 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
   }
+
+  .outer-container {
+    @apply container mx-auto px-0 lg:px-12 xl:px-40;
+  }
 }
 /* // <uniquifier>: Use a unique and descriptive class name */
 /* // <weight>: Use a value from 300 to 700 */

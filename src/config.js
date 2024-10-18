@@ -21,9 +21,9 @@ const config = {
         // Required - we use this to find the plan in the webhook
         // (for instance if you want to update the user's credits based on the plan)
         priceId:
-          process.env.NODE_ENV === "production" ? "price_SLKDHkjh8yP8UPO98pouikj" : "price_456",
+          process.env.NODE_ENV === "development" ? "price_1QB6THK7kf3vNCJgYYcMCPL1" : "price_456",
         // REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Starter",
+        name: "One Month Access",
         // A friendly description of the plan, displayed on the pricing page.
         // Tip: explain why this plan and not others.
         description: "Perfect for small projects",
@@ -36,7 +36,9 @@ const config = {
           { name: "SvelteKit boilerplate" },
           { name: "User oauth" },
           { name: "Database" },
-          { name: "Emails" }
+          { name: "Emails" },
+          { name: "Chat", disabled: true },
+          { name: "Project management", disabled: true }
         ]
       },
       // Repeat the above plan properties for each plan you want to add.
@@ -45,10 +47,10 @@ const config = {
         // You can only have one plan with isFeatured: true.
         isFeatured: true,
         priceId:
-          process.env.NODE_ENV === "production" ? "price_SLKDHkjh8ygdfgP8UPO98pouikj" : "price_789",
-        name: "Professional",
+          process.env.NODE_ENV === "development" ? "price_1QB2bZK7kf3vNCJgsQNpXRun" : "price_789",
+        name: "Lifetime Access",
         description: "Perfect for larger projects",
-        price: 149,
+        price: 99,
         priceAnchor: 149,
         features: [
           { name: "NextJS boilerplate" },
