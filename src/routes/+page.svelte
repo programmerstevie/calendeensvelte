@@ -21,7 +21,7 @@
 
 <TagSEO canonicalSlug="" />
 <!-- <TagSchema /> -->
-<main>
+<main class="quicksand">
   <Header></Header>
   <Hero></Hero>
   <Pricing></Pricing>

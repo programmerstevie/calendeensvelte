@@ -13,7 +13,8 @@ module.exports = {
       animation: {
         popup: "popup 1s ease",
         shimmer: "shimmer 1s ease",
-        "shake-center": "shake-center 1s linear 0s 1 normal none"
+        "shake-center": "shake-center 1s linear 0s 1 normal none",
+        "bounce-realistic": "bounce-realistic 2s forwards"
       },
       keyframes: {
         popup: {
@@ -38,6 +39,52 @@ module.exports = {
           "80%": { transform: "rotate(-8deg)" },
           "90%": { transform: "rotate(8deg)" },
           "100%": { transform: "rotate(0deg)", "transform-origin": "50% 50%" }
+        },
+        "bounce-realistic": {
+          '0%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '10%': {
+            transform: 'translateY(-40%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '20%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+          '30%': {
+            transform: 'translateY(-20%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '40%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+          '50%': {
+            transform: 'translateY(-15%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '60%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+          '70%': {
+            transform: 'translateY(-7%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '80%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
+          '90%': {
+            transform: 'translateY(-3%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)',
+          },
+          '100%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+          },
         }
       }
     }
