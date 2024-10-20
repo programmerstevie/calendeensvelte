@@ -30,7 +30,7 @@
         <span class="dafont uppercase text-base-200 relative ml-2 lg:ml-0 lg:block lg:mt-2">
           <div class="inline-block animate-bounce-realistics text-nowrap">your Khushu'</div>
           <span
-            class="absolute h-[1.1em] w-[8em] -left-4 sm:left-[-10px] lg:-left-4 top-[5px] lg:top-0 bg-base-content rotate-[-1deg] -z-10"
+            class="absolute h-[1.1em] w-[8em] -left-3 sm:left-[-10px] lg:-left-4 top-[5px] lg:top-0 bg-base-content rotate-[-1deg] -z-10"
           ></span>
         </span>
       </h1>
