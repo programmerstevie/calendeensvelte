@@ -13,7 +13,7 @@
   <img
     src="athan_notification_1.png"
     alt="annoying notification"
-    class="sm:h-full w-[95vw] sm:w-auto relative right-[1.5vw] sm:right-5 animate-slideDown opacity-0"
+    class="sm:h-full w-[95vw] sm:w-auto relative right-[1vw] sm:right-5 animate-slideDown opacity-0"
     style={"animation-delay: 3s"}
   />
 </div>
