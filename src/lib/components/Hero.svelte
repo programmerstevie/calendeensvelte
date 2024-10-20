@@ -9,7 +9,7 @@
   $: sale = sale_num > num_customers;
 </script>
 
-<div class="fixed top-3 h-16 w-[100vw] flex justify-center">
+<div class="fixed top-3 h-16 w-[100vw] flex justify-center z-50">
   <img
     src="athan_notification_1.png"
     alt="annoying notification"
