@@ -1,9 +1,9 @@
 /**
  * @typedef {Object} Props
  * @property {unknown} appName
- * @property {unknown} headerImageSrc
- * @property {unknown} actionDescription
- * @property {unknown} signInLink
+ * @property {unknown} userName
+ * @property {unknown} checkoutLink
+ * @property {unknown} incentiveToCompleteOrderNow
  * @property {unknown} supportEmail
  * @property {unknown} year
  */
@@ -96,18 +96,6 @@ const withProps = (props) => `<!doctype html>
 
   </style>
   <style type="text/css">
-    @media only screen and (max-width:479px) {
-      table.mj-full-width-mobile {
-        width: 100% !important;
-      }
-
-      td.mj-full-width-mobile {
-        width: auto !important;
-      }
-    }
-
-  </style>
-  <style type="text/css">
     .button a {
       text-decoration: none;
     }
@@ -115,9 +103,9 @@ const withProps = (props) => `<!doctype html>
   </style>
 </head>
 
-<body style="word-spacing:normal;">
-  <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Your Sign-in Link to ${props.appName} – Get Started!</div>
-  <div style="" lang="und" dir="auto">
+<body style="word-spacing:normal;background-color:#e8e8e8;">
+  <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">Don't Miss Out on ${props.appName} – Complete Your Purchase!</div>
+  <div style="background-color:#e8e8e8;" lang="und" dir="auto">
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" bgcolor="#ffffff" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="background:#ffffff;background-color:#ffffff;margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#ffffff;background-color:#ffffff;width:100%;">
@@ -129,35 +117,22 @@ const withProps = (props) => `<!doctype html>
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tbody>
                     <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;" class="mj-full-width-mobile">
-                          <tbody>
-                            <tr>
-                              <td style="width:550px;" class="mj-full-width-mobile">
-                                <img alt="${props.appName} Header Image" src="${props.headerImageSrc}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="550" height="auto" />
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:10px;word-break:break-word;">
-                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;line-height:1;text-align:center;text-transform:uppercase;color:#8f86bb;">${props.appName}</div>
+                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:24px;font-weight:bold;line-height:1;text-align:center;text-transform:uppercase;color:#8f86bb;">Don't Miss Out!</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:12px 25px;word-break:break-word;">
-                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:20px;font-weight:normal;line-height:24px;text-align:center;color:#333333;">Sign in to <strong style="font-weight: bold;">${props.appName}</strong><br /> to ${props.actionDescription}</div>
+                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:18px;line-height:24px;text-align:center;color:#333333;">Hi ${props.userName}, your checkout session expired, but no worries! Your favorite items are still waiting for you.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" class="button" style="font-size:0px;padding:20px;word-break:break-word;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:150px;line-height:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:200px;line-height:100%;">
                           <tbody>
                             <tr>
-                              <td align="center" bgcolor="#8f86bb" role="presentation" style="border:none;border-radius:8px;cursor:auto;height:60px;mso-padding-alt:10px 25px;background:#8f86bb;" valign="middle">
-                                <a href="${props.signInLink}" style="display:inline-block;width:100px;background:#8f86bb;color:#f5f5f5;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:18px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:8px;" target="_blank"> SIGN IN </a>
+                              <td align="center" bgcolor="#ffa401" role="presentation" style="border:none;border-radius:8px;cursor:auto;height:60px;mso-padding-alt:10px 25px;background:#ffa401;" valign="middle">
+                                <a href="${props.checkoutLink}" style="display:inline-block;width:150px;background:#ffa401;color:#f5f5f5;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:8px;" target="_blank"> Complete My Purchase </a>
                               </td>
                             </tr>
                           </tbody>
@@ -166,14 +141,17 @@ const withProps = (props) => `<!doctype html>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:20px 25px;word-break:break-word;">
-                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#3a3a52;">If you didn't request this email, you can safely ignore it.</div>
+                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:16px;line-height:1;text-align:center;color:#3a3a52;">Enjoy ${props.incentiveToCompleteOrderNow} if you complete your order now!</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#3a3a52;">If you believe you received this email by mistake, please contact our support team<br />
-                          <a href="mailto:${props.supportEmail}" style="color: #8f86bb;">${props.supportEmail}</a>.
-                        </div>
+                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#3a3a52;">Need help? We're just an email away at <a href="mailto:${props.supportEmail}" style="color: #8f86bb;">${props.supportEmail}</a>.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:14px;line-height:1;text-align:center;color:#3a3a52;">Best, <br /> ${props.appName}</div>
                       </td>
                     </tr>
                   </tbody>

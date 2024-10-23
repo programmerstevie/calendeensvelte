@@ -106,33 +106,27 @@ module.exports = {
       {
         bumblebee: {
           ...require("daisyui/src/theming/themes")["bumblebee"],
-          // primary: "#8f86bb",
-          // "primary-content": "#07060d",
-          // secondary: "#ffa401",
-          // "secondary-content": "#160a00",
-          // accent: "#f9a64d",
-          // "accent-content": "#150a02"
           ...{
-            primary: "#8f86bb", // Same as before
-            "primary-content": "#f5f5f5", // Lightened for better contrast
-            secondary: "#ffa401", // Same as before
-            "secondary-content": "#ffffff", // White for better readability
-            accent: "#f9a64d", // Same as before
-            "accent-content": "#ffffff", // White for contrast
-            neutral: "#3a3a52", // Lightened and warmed up
-            "neutral-content": "#e0e0e8", // Slightly warmer light color
-            "base-100": "#ffffff", // Same as before
-            "base-200": "#e8e8e8", // Same as before
-            "base-300": "#d3d3d3", // Same as before
-            "base-content": "#333333", // Dark gray for a smoother contrast
-            info: "#00b6ff", // Same as before
-            "info-content": "#ffffff", // White for contrast
-            success: "#00aa6c", // Same as before
-            "success-content": "#ffffff", // White for contrast
-            warning: "#fdc100", // Same as before
-            "warning-content": "#333333", // Dark gray for a change from black
-            error: "#ff5c61", // Same as before
-            "error-content": "#ffffff" // White for better contrast
+            primary: "#8f86bb",
+            "primary-content": "#f5f5f5",
+            secondary: "#ffa401",
+            "secondary-content": "#ffffff",
+            accent: "#f9a64d",
+            "accent-content": "#ffffff",
+            neutral: "#3a3a52",
+            "neutral-content": "#e0e0e8",
+            "base-100": "#ffffff",
+            "base-200": "#e8e8e8",
+            "base-300": "#d3d3d3",
+            "base-content": "#333333",
+            info: "#00b6ff",
+            "info-content": "#ffffff",
+            success: "#00aa6c",
+            "success-content": "#ffffff",
+            warning: "#fdc100",
+            "warning-content": "#333333",
+            error: "#ff5c61",
+            "error-content": "#ffffff"
           }
         }
       }

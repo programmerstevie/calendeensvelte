@@ -4,8 +4,8 @@ import Resend from "@auth/sveltekit/providers/resend";
 import { AUTH_SECRET, AUTH_RESEND_KEY } from "$env/static/private";
 
 import { getDB } from "./db";
-import config from "./config";
-import * as MagicLinkTemplate from "../emails/magic-link.js";
+import config from "@/config";
+import * as MagicLinkTemplate from "../emails/magic-link";
 
 export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
   const db = await getDB();
@@ -21,7 +21,9 @@ export const { handle, signIn, signOut } = SvelteKitAuth(async (event) => {
         apiKey: AUTH_RESEND_KEY,
         async sendVerificationRequest(params) {
           // Define prop values
-          const props: MagicLinkTemplate.Props = {
+
+          /** @type {MagicLinkTemplate.Props} */
+          const props = {
             appName: config.appName,
             signInLink: params.url,
             headerImageSrc:

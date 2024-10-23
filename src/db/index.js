@@ -11,8 +11,8 @@ const getClient = async () => {
     case "production":
     default:
       return (await import("@libsql/client/web")).createClient({
-        url: TURSO_DATABASE_URL as string,
-        authToken: TURSO_AUTH_TOKEN as string
+        url: TURSO_DATABASE_URL,
+        authToken: TURSO_AUTH_TOKEN
       });
     // default:
     // 	throw new Error('Unsupported NODE_ENV');
