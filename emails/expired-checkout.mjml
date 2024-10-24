@@ -1,32 +1,57 @@
 <mjml>
   <mj-head>
     <mj-preview>Don't Miss Out on {{appName}} – Complete Your Purchase!</mj-preview>
-    <mj-style>
-      .button a {
-        text-decoration: none;
-      }
-    </mj-style>
+    <mj-style> .button a { text-decoration: none; } </mj-style>
   </mj-head>
   <mj-body background-color="#e8e8e8">
     <mj-section padding="20px 0" background-color="#ffffff">
       <mj-column>
-        <mj-text font-size="24px" color="#8f86bb" font-weight="bold" align="center" padding-top="30px" padding-bottom="10px" text-transform="uppercase">
+        <mj-text
+          font-size="24px"
+          color="#8f86bb"
+          font-weight="bold"
+          align="center"
+          padding-top="30px"
+          padding-bottom="10px"
+          text-transform="uppercase"
+        >
           Don't Miss Out!
         </mj-text>
-        <mj-text font-size="18px" color="#333333" align="center" padding="12px 25px" line-height="24px">
-          Hi {{userName}}, your checkout session expired, but no worries! Your favorite items are still waiting for you.
+        <mj-text
+          font-size="18px"
+          color="#333333"
+          align="center"
+          padding="12px 25px"
+          line-height="24px"
+        >
+          Hi {{userName}}, your checkout session expired, but no worries! Your favorite items are
+          still waiting for you.
         </mj-text>
-        <mj-button href="{{checkoutLink}}" height="60px" width="200px" border-radius="8px" background-color="#ffa401" color="#f5f5f5" padding="20px" font-size="16px" font-weight="bold" align="center" css-class="button">
+        <mj-button
+          href="{{checkoutLink}}"
+          height="60px"
+          width="200px"
+          border-radius="8px"
+          background-color="#ffa401"
+          color="#f5f5f5"
+          padding="20px"
+          font-size="16px"
+          font-weight="bold"
+          align="center"
+          css-class="button"
+        >
           Complete My Purchase
         </mj-button>
         <mj-text font-size="16px" color="#3a3a52" align="center" padding="20px 25px">
           Enjoy {{incentiveToCompleteOrderNow}} if you complete your order now!
         </mj-text>
         <mj-text font-size="14px" color="#3a3a52" align="center" padding="10px 25px">
-          Need help? We're just an email away at <a href="mailto:{{supportEmail}}" style="color: #8f86bb;">{{supportEmail}}</a>.
+          Need help? We're just an email away at
+          <a href="mailto:{{supportEmail}}" style="color: #8f86bb">{{supportEmail}}</a>.
         </mj-text>
         <mj-text font-size="14px" color="#3a3a52" align="center" padding="10px 25px">
-          Best, <br /> {{appName}}
+          Best, <br />
+          {{appName}}
         </mj-text>
       </mj-column>
     </mj-section>

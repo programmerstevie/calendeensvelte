@@ -2,21 +2,15 @@
   import { twMerge } from "tailwind-merge";
   import Container from "./Container.svelte";
   import FiveStars from "./FiveStars.svelte";
+  import Notifications from "./Notifications.svelte";
   import IoMdGift from "svelte-icons/io/IoMdGift.svelte";
 
   const sale_num = 1000;
   const num_customers = 973;
-  $: sale = sale_num > num_customers;
+  let sale = $derived(sale_num > num_customers);
 </script>
 
-<div class="fixed top-3 h-16 w-[100vw] flex justify-center z-50">
-  <img
-    src="athan_notification_1.png"
-    alt="annoying notification"
-    class="sm:h-full w-[95vw] sm:w-auto relative right-[1vw] sm:right-5 animate-slideDown opacity-0"
-    style={"animation-delay: 3s"}
-  />
-</div>
+<Notifications />
 
 <Container class="lg:mt-20 outer-container text-center lg:text-left">
   <div class="lg:flex">

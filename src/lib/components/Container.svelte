@@ -1,10 +1,10 @@
 <script>
   import { twMerge } from "tailwind-merge";
 
-  let className = "";
-  export { className as class };
+  /** @type {{class?: string, children?: import('svelte').Snippet}} */
+  let { class: className = "", children } = $props();
 </script>
 
 <div class={twMerge("container mx-auto px-12", className)}>
-  <slot />
+  {@render children?.()}
 </div>

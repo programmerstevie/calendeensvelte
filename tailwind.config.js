@@ -10,6 +10,9 @@ module.exports = {
         foreground: "var(--foreground)",
         "neutral-content-secondary": "#e0e0e8d0"
       },
+      boxShadow: {
+        'simple': '0px 2px 2px 0px rgba(0, 0, 0, 0.4)',
+      },
       animation: {
         popup: "popup 1s ease",
         shimmer: "shimmer 1s ease",
@@ -90,8 +93,8 @@ module.exports = {
         slideDown: {
           "0%": { transform: "translateY(-100%)", opacity: "0" },
           "10%": { transform: "translateY(0)", opacity: "1" },
-          "99%": { transform: "translateY(0)", opacity: "1" },
-          "100%": { transform: "translateY(0)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+          // "100%": { transform: "translateY(0)", opacity: "0" }
         }
       }
     }

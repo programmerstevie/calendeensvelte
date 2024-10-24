@@ -1,15 +1,17 @@
 <script>
-  const props = {
+  /** @type {{[key: string]: any}} */
+  let { ...props_1 } = $props();
+  const props_ = {
     width: "322",
     height: "348",
     viewBox: "0 0 322 348",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    ...$$props
+    ...props_1
   };
 </script>
 
-<svg {...props}>
+<svg {...props_}>
   <path
     fill-rule="evenodd"
     clip-rule="evenodd"

@@ -7,8 +7,8 @@
   import Pricing from "$lib/components/Pricing.svelte";
   import Footer from "$lib/components/Footer.svelte";
 
-  /** @type {import('./$types').PageData} */
-  export let data;
+  /** @type {{data: import('./$types').PageData}} */
+  let { data } = $props();
 
   onMount(() => {
     console.log(data.post);

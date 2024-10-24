@@ -7,7 +7,7 @@
   <nav class="h-full navbar">
     <Container class="h-full outer-container">
       <a href="#top" class="flex items-center flex-1">
-        <img src="/logo.png" width={50} height={50} alt="logo" class="animate-shake-center"/>
+        <img src="/logo.png" width={50} height={50} alt="logo" class="animate-shake-center" />
         <span class="ml-5 text-3xl font-bold">{config.appName}</span>
       </a>
       <ul class="ml-28 space-x-12 font-bold navbar-end hidden lg:flex">
@@ -22,7 +22,7 @@
         </li>
       </ul>
       <div class="flex-none lg:hidden">
-        <button class="btn btn-square btn-ghost">
+        <button class="btn btn-square btn-ghost" aria-label="hamburger menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

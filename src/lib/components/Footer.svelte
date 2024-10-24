@@ -8,7 +8,9 @@
     <nav>
       <img src="/logo.png" alt="Company Logo" width="64" />
       <SignIn provider="resend">
-        <span class="btn btn-secondary" slot="submitButton">Sign In with Resend</span>
+        {#snippet submitButton()}
+          <span class="btn btn-secondary">Sign In with Resend</span>
+        {/snippet}
       </SignIn>
     </nav>
   </Container>

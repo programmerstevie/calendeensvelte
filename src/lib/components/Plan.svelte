@@ -4,7 +4,8 @@
   import CalendeenIconTracedSvg from "../assets/svg/CalendeenIconTracedSVG.svelte";
   import IoMdCheckmarkCircleOutline from "svelte-icons/io/IoMdCheckmarkCircleOutline.svelte";
   import IoMdCloseCircleOutline from "svelte-icons/io/IoMdCloseCircleOutline.svelte";
-  export let plan;
+  /** @type {{plan: any}} */
+  let { plan } = $props();
 </script>
 
 <Container

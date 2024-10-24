@@ -1,7 +1,8 @@
 <script>
   import config from "@/config.js";
 
-  export let canonicalSlug;
+  /** @type {{canonicalSlug: any}} */
+  let { canonicalSlug } = $props();
   const description = "Align your day with your deen.";
 </script>
 

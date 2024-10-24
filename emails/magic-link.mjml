@@ -1,23 +1,52 @@
 <mjml>
   <mj-head>
     <mj-preview>Your Sign-in Link to {{appName}} – Get Started!</mj-preview>
-    <mj-style>
-      .button a {
-        text-decoration: none;
-      }
-    </mj-style>
+    <mj-style> .button a { text-decoration: none; } </mj-style>
   </mj-head>
   <mj-body>
     <mj-section padding="20px 0" background-color="#ffffff">
       <mj-column>
-        <mj-image src={{headerImageSrc}} alt="{{appName}} Header Image" width="600px" fluid-on-mobile="true" />
-        <mj-text font-size="24px" color="#8f86bb" font-weight="bold" align="center" padding-top="30px" padding-bottom="10px" text-transform="uppercase">
+        <mj-image
+          src="{{headerImageSrc}}"
+          alt="{{appName}} Header Image"
+          width="600px"
+          fluid-on-mobile="true"
+        />
+        <mj-text
+          font-size="24px"
+          color="#8f86bb"
+          font-weight="bold"
+          align="center"
+          padding-top="30px"
+          padding-bottom="10px"
+          text-transform="uppercase"
+        >
           {{appName}}
         </mj-text>
-        <mj-text font-size="20px" color="#333333" font-weight="normal" align="center" padding="12px 25px" line-height="24px">
-          Sign in to <strong style="font-weight: bold;">{{appName}}</strong><br /> to {{actionDescription}}
+        <mj-text
+          font-size="20px"
+          color="#333333"
+          font-weight="normal"
+          align="center"
+          padding="12px 25px"
+          line-height="24px"
+        >
+          Sign in to <strong style="font-weight: bold">{{appName}}</strong><br />
+          to {{actionDescription}}
         </mj-text>
-        <mj-button href="{{signInLink}}" height="60px" width="150px" border-radius="8px" background-color="#8f86bb" color="#f5f5f5" padding="20px" font-size="18px" font-weight="bold" align="center" css-class="button">
+        <mj-button
+          href="{{signInLink}}"
+          height="60px"
+          width="150px"
+          border-radius="8px"
+          background-color="#8f86bb"
+          color="#f5f5f5"
+          padding="20px"
+          font-size="18px"
+          font-weight="bold"
+          align="center"
+          css-class="button"
+        >
           SIGN IN
         </mj-button>
         <mj-text font-size="14px" color="#3a3a52" align="center" padding="20px 25px">
@@ -25,7 +54,7 @@
         </mj-text>
         <mj-text font-size="14px" color="#3a3a52" align="center" padding="10px 25px">
           If you believe you received this email by mistake, please contact our support team<br />
-          <a href="mailto:{{supportEmail}}" style="color: #8f86bb;">{{supportEmail}}</a>.
+          <a href="mailto:{{supportEmail}}" style="color: #8f86bb">{{supportEmail}}</a>.
         </mj-text>
       </mj-column>
     </mj-section>
